@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de TI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-image: url('https://i.imgur.com/P2X9Y99.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.97);
+            width: 100%;
+            max-width: 450px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            overflow: hidden;
+            padding-bottom: 25px;
+        }
+        .header-img {
+            width: 100%;
+            display: block;
+        }
+        .content {
+            padding: 20px;
+        }
+        h2 {
+            color: #004085;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .radio-group {
+            background: #f1f3f5;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .radio-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+        .radio-item input {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <img src="https://i.imgur.com/RPl7K6f.png" alt="Banner Suporte" class="header-img">
+    
+    <div class="content">
+        <h2>Formulário de Solicitação de Serviço de TI</h2>
+        
+        <form action="https://formspree.io/f/xykdygkp" method="POST">
+            
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome_usuario" required placeholder="Seu nome">
+
+            <label>Unidade:</label>
+            <div class="radio-group">
+                <div class="radio-item">
+                    <input type="radio" id="u1" name="unidade" value="UNIDADE 1" required>
+                    <label for="u1" style="margin:0; font-weight:normal;">UNIDADE 1</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="u2" name="unidade" value="UNIDADE 2">
+                    <label for="u2" style="margin:0; font-weight:normal;">UNIDADE 2</label>
+                </div>
+            </div>
+
+            <label for="departamento">Departamento:</label>
+            <select id="departamento" name="departamento" required>
+                <option value="">Selecione o Setor</option>
+                <option>NÚCLEO 1</option>
+                <option>COORDENAÇÃO ADMINISTRATIVA</option>
+				<option>COORDENAÇÃO TERAPEUTICA</option>
+                <option>DIRETORIA</option>
+                <option>COORDENAÇÃO AT's</option>
+                <option>FISIOTERAPIA</option>
+                <option>PSICOMOTRICIDADE 1</option>
+                <option>RECEPÇÃO</option>
+                <option>PSICOLOGIA TCC</option>
+                <option>ABA</option>
+                <option>PSICOPEDAGOGIA</option>
+                <option>FONOAUDIOLOGIA</option>
+                <option>MUSICOTERAPIA</option>
+                <option>PSICOMOTRICIDADE 2</option>
+                <option>NUTRIÇÃO</option>
+            </select>
+
+            <label for="servico">Tipo de Serviço:</label>
+            <select id="servico" name="tipo_servico" required>
+                <option value="">Selecione o Problema</option>
+                <option value="Rede">Rede</option>
+                <option value="Software">Software</option>
+				<option value="Hardware">Hardware</option>
+				<option value="falhas elétricas">falhas elétricas</option>
+				<option value="manutenção PREVENTIVA">manutenção Preventiva</option>
+                <option value="Outros">Outros</option>
+            </select>
+
+            <label for="comentario">Comentário / Detalhes:</label>
+            <textarea id="comentario" name="comentario" rows="4" placeholder="Descreva brevemente o problema..."></textarea>
+
+            <button type="submit">ENVIAR</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html
